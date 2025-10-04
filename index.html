@@ -38,7 +38,7 @@
     .card{background:rgba(255,255,255,0.02); padding:16px; border-radius:12px}
     .card h3{margin:0 0 8px}
     .portfolio-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px}
-    .thumb{height:140px; border-radius:10px; background:linear-gradient(120deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); display:flex;align-items:center;justify-content:center;color:var(--muted)}
+    .thumb{height:140px; border-radius:10px; background:linear-gradient(120deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); display:flex;align-items:center;justify-content:center;color:var(--muted); text-align:center; padding:10px}
     footer{margin-top:36px; color:var(--muted); text-align:center; padding:28px 0}
     .contact-form{display:grid; gap:10px}
     input, textarea{background:transparent; border:1px solid rgba(255,255,255,0.04); padding:10px 12px; border-radius:10px; color:inherit}
@@ -73,7 +73,6 @@
         <a href="#solutions">AI Solutions</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
-        <a href="https://github.com/santanug5ai" target="_blank">GitHub</a>
       </nav>
       <div class="mobile-nav" style="display:none">
         <button class="btn btn-ghost" id="menuBtn">Menu</button>
@@ -83,7 +82,7 @@
     <main>
       <section id="home" class="hero">
         <div class="hero-card">
-          <h1>Hello — I\'m <span class="tag">Santanu</span></h1>
+          <h1>Hello — I'm <span class="tag">Santanu</span></h1>
           <p class="lead">I help telecom and enterprise teams build production-ready AI — from PoC to deployed solutions (chatbots, predictive models, automation).</p>
           <div class="cta">
             <a class="btn btn-primary" href="#contact">Request Demo</a>
@@ -97,10 +96,11 @@
         </div>
 
         <aside class="profile">
-          <img src="https://github.com/santanug5ai/aisolutions/blob/main/1676869232430.jpg" alt="profile" style="width:88px;height:88px;border-radius:12px;object-fit:cover;background:var(--glass);display:block;margin-bottom:10px">
+          <!-- using the raw GitHub file URL for your uploaded photo -->
+          <img src="https://raw.githubusercontent.com/santanug5ai/aisolutions/main/myphoto.jpg" alt="Santanu Ghosh" style="width:120px;height:120px;border-radius:12px;object-fit:cover;background:var(--glass);display:block;margin-bottom:10px">
           <div style="font-weight:700">Santanu Ghosh</div>
-          <div class="small">Enterprise Architect • AI Engineer • Telecom Presales</div>
-          <p class="small" style="margin-top:10px;color:var(--muted)">Available for consulting and short-term projects. I deliver ML production, model ops and scaled automation.</p>
+          <div class="small">Enterprise Architect • AI & Cloud-Native Architect • Telecom Presales</div>
+          <p class="small" style="margin-top:10px;color:var(--muted)">Available for consulting and short-term projects. I deliver ML production, model ops and scaled automation for telecom and enterprise customers.</p>
           <div style="margin-top:12px">
             <a class="btn btn-primary" href="#contact">Hire Me</a>
           </div>
@@ -110,19 +110,19 @@
       <section id="about" style="margin-top:28px">
         <div class="hero-card">
           <h2>About Me</h2>
-          <p class="lead">I am an AI & Telecom architect with experience in model development, MLOps, system integration, and productizing ML solutions for telecom and enterprise customers. I write practical, production-ready AI and love simplifying complex ML workflows.</p>
+          <p class="lead">I am an Enterprise Architect and AI practitioner with 12+ years of experience delivering AI & data-driven solutions for telecom and enterprise customers. My work spans end-to-end ML projects — data engineering, model development, MLOps, integration with BSS/OSS, and productising ML for production. I specialise in churn & customer analytics, conversational AI, predictive maintenance, and deploying models at scale.</p>
           <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap">
             <div class="card">
               <h3>Skills</h3>
-              <div class="small">Python, PyTorch, TensorFlow, scikit-learn, LangChain, OpenAI, MLflow, Docker, Kubernetes, Kafka, SQL</div>
+              <div class="small">Python, PyTorch, TensorFlow, scikit-learn, Hugging Face, LangChain, OpenAI APIs, MLflow, Docker, Kubernetes, Kafka, Airflow, SQL/NoSQL, CI/CD</div>
             </div>
             <div class="card">
               <h3>Certifications</h3>
-              <div class="small">(List your certs here)</div>
+              <div class="small">Certified AWS Solutions Architect (Associate), TensorFlow Developer Certificate, ML & Data certifications (add your specific certs)</div>
             </div>
             <div class="card">
               <h3>Experience</h3>
-              <div class="small">Enterprise AI, Telco BSS/OSS, Pre-sales architecture, ADM services</div>
+              <div class="small">Enterprise Architect & Telecom Presales — delivered end-to-end AI programs for BSS/OSS, revenue assurance, customer analytics, and automation. Hands-on experience with ADM services, cloud migrations, and AI-led transformation.</div>
             </div>
           </div>
         </div>
@@ -133,20 +133,24 @@
         <div class="solutions">
           <div class="card">
             <h3>Chatbot / Conversational AI</h3>
-            <p class="small">Custom LLM integrations, retrieval-augmented generation (RAG), FAQ bots, support automation.</p>
+            <p class="small">RAG-based assistants using Hugging Face + LangChain + OpenAI for telecom support portals and internal knowledge. Integrations with FAQs, ticketing systems, and secure document stores.</p>
             <div style="margin-top:8px"><a class="small" href="#">Demo</a> • <a class="small" href="#">Case Study</a></div>
           </div>
           <div class="card">
             <h3>Predictive Analytics</h3>
-            <p class="small">Churn, uplift, demand forecasting, anomaly detection with explainability.</p>
+            <p class="small">Churn prediction, customer segmentation, uplift modelling, and predictive maintenance using feature engineering, time-series modelling, and explainability (SHAP/LIME).</p>
           </div>
           <div class="card">
             <h3>Model Ops & Deployment</h3>
-            <p class="small">Docker, Kubernetes, MLflow, CI/CD, monitoring, and observability for models.</p>
+            <p class="small">Production deployment using Docker, Kubernetes, MLflow, CI/CD pipelines, monitoring, and model governance for reliable ML services.</p>
           </div>
           <div class="card">
             <h3>Automation & Integrations</h3>
-            <p class="small">APIs, event-driven integrations, telecom stack automation (BSS/OSS).</p>
+            <p class="small">Event-driven integrations, API-led architectures, and automation across BSS/OSS stacks — focusing on operational efficiency and reduced manual work.</p>
+          </div>
+          <div class="card">
+            <h3>Explainability & Monitoring</h3>
+            <p class="small">Model explainability, bias checks, and observability pipelines for production-grade monitoring and compliance.</p>
           </div>
         </div>
       </section>
@@ -156,18 +160,23 @@
         <div class="portfolio-grid">
           <div class="card">
             <div class="thumb">Churn Prediction — Telecom</div>
-            <p class="small">End-to-end ML pipeline: data, model, deployment, monitoring.</p>
+            <p class="small">Built an end-to-end pipeline: data ingestion from OSS/BSS, feature store, ensemble models, and CI/CD for model retraining. Improved retention actions with 18% uplift in targeted campaigns.</p>
             <div style="margin-top:8px"><a class="small" href="#">Read</a></div>
           </div>
           <div class="card">
-            <div class="thumb">Banking Chatbot</div>
-            <p class="small">RAG-based conversational assistant connected to internal docs.</p>
+            <div class="thumb">Enterprise Conversational Assistant</div>
+            <p class="small">RAG-enabled assistant connected to internal knowledge bases, with secure authentication and escalation to human agents. Reduced average handle time and support load.</p>
             <div style="margin-top:8px"><a class="small" href="#">Read</a></div>
           </div>
           <div class="card">
-            <div class="thumb">Streamlit Demo</div>
-            <p class="small">Interactive demo for quick model prototyping (embed or link to demo).</p>
+            <div class="thumb">Interactive Demo (Streamlit)</div>
+            <p class="small">Prototype demos for clients: model explainability dashboards, quick prediction UIs, and data profiling tools. Embeddable via iframe or hosted on Streamlit Cloud.</p>
             <div style="margin-top:8px"><a class="small" href="#">Try</a></div>
+          </div>
+          <div class="card">
+            <div class="thumb">Revenue Assurance Automation</div>
+            <p class="small">Automated reconciliation and anomaly detection across billing pipelines; reduced leakage and manual reconciliation effort.</p>
+            <div style="margin-top:8px"><a class="small" href="#">Read</a></div>
           </div>
         </div>
       </section>
@@ -190,12 +199,12 @@
 
           <aside class="card">
             <h3>Quick Links</h3>
-            <div class="small">GitHub • LinkedIn • Resume • Payment links</div>
+            <div class="small">LinkedIn • Resume • Payment links</div>
             <div style="margin-top:10px">
               <div class="socials">
-                <a class="small" href="#">GitHub</a>
-                <a class="small" href="#">LinkedIn</a>
-                <a class="small" href="#">Resume (PDF)</a>
+                <a class="small" href="https://github.com/santanug5ai" target="_blank">GitHub</a>
+                <a class="small" href="https://www.linkedin.com/in/santanu-ghosh-23204624/" target="_blank">LinkedIn</a>
+                <a class="small" href="https://raw.githubusercontent.com/santanug5ai/aisolutions/main/Resume_Santanu_Ghosh.pdf" target="_blank">Resume (PDF)</a>
               </div>
             </div>
           </aside>
@@ -235,16 +244,13 @@
   <!--
     HOW TO DEPLOY (quick):
     1. Save this file as index.html
-    2. Create a new GitHub repository named <your-username>.github.io
-    3. Push this index.html to the repository default branch (main). GitHub Pages will auto-serve it at https://<your-username>.github.io
-    4. To use a custom domain: add your domain in repository Pages settings and create an A/CNAME record with your domain registrar.
+    2. Commit & push to your GitHub repo root (main branch)
+    3. In repo Settings → Pages: set Source = main / (root)
+    4. Visit: https://santanug5ai.github.io/aisolutions/
 
-    OPTIONAL ENHANCEMENTS:
-    - Replace placeholder images with your photo (update <img src="" ...>
-    - Embed Streamlit/HuggingFace demos using <iframe> links
-    - Replace mailto with a serverless form (Netlify Forms, Formspree, or Google Forms)
-    - Add Google Analytics or Plausible for tracking
-    - Add payment buttons (Gumroad, Razorpay) where needed
+    NOTES:
+    - I set the Resume PDF link to a likely raw GitHub path. If your PDF is located elsewhere, update that link.
+    - If you'd like the Quick Links area to remove GitHub as well, tell me and I'll remove it.
   -->
 </body>
 </html>
