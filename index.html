@@ -1,231 +1,69 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Santanu Ghosh — AI Solutions & Portfolio</title>
-  <meta name="description" content="AI Solutions, portfolio and contact — Santanu Ghosh" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4; --glass: rgba(255,255,255,0.04);
-      --maxw:1100px; --radius:14px; --shadow: 0 6px 24px rgba(2,6,23,0.6);
-      --glass-2: rgba(255,255,255,0.02);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{font-family:'Poppins',system-ui,Segoe UI,Roboto,Arial; margin:0; background:linear-gradient(180deg,#071022 0%, #071426 60%); color:#e6eef6; -webkit-font-smoothing:antialiased}
-    .container{max-width:var(--maxw); margin:32px auto; padding:24px}
-    header{display:flex; align-items:center; justify-content:space-between; gap:16px}
-    .brand{display:flex; align-items:center; gap:12px}
-    .logo{width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021124;box-shadow:0 6px 18px rgba(3,8,20,0.6)}
-    nav{display:flex; gap:12px; align-items:center}
-    nav a{color:var(--muted); text-decoration:none; padding:8px 12px; border-radius:8px}
-    nav a:hover{color:white; background:var(--glass)}
-    .hero{display:grid; grid-template-columns:1fr 380px; gap:28px; align-items:center; margin-top:28px}
-    .hero-card{background:linear-gradient(180deg,var(--card), rgba(11,18,32,0.6)); padding:28px; border-radius:var(--radius); box-shadow:var(--shadow)}
-    h1{margin:0; font-size:28px}
-    .tag{color:var(--accent); font-weight:600}
-    .lead{color:var(--muted); margin-top:12px}
-    .cta{display:flex; gap:12px; margin-top:18px}
-    .btn{padding:10px 14px; border-radius:10px; font-weight:600; cursor:pointer; border:0}
-    .btn-primary{background:linear-gradient(90deg,var(--accent),#7c3aed); color:#021124}
-    .btn-ghost{background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.04)}
-    .metrics{display:flex; gap:12px; margin-top:18px}
-    .metric{background:var(--glass-2); padding:10px 12px; border-radius:10px; color:var(--muted)}
-    .profile{padding:18px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
-    .solutions{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-top:20px}
-    .card{background:rgba(255,255,255,0.02); padding:16px; border-radius:12px}
-    .card h3{margin:0 0 8px}
-    .portfolio-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px}
-    .thumb{height:140px; border-radius:10px; background:linear-gradient(120deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); display:flex;align-items:center;justify-content:center;color:var(--muted)}
-    footer{margin-top:36px; color:var(--muted); text-align:center; padding:28px 0}
-    .contact-form{display:grid; gap:10px}
-    input, textarea{background:transparent; border:1px solid rgba(255,255,255,0.04); padding:10px 12px; border-radius:10px; color:inherit}
-    textarea{min-height:120px; resize:vertical}
-    .socials{display:flex; gap:10px; align-items:center}
-    .small{font-size:13px; color:var(--muted)}
-
-    /* Responsive */
-    @media (max-width:880px){
-      .hero{grid-template-columns:1fr;}
-      nav{display:none}
-      .mobile-nav{display:flex}
-    }
-    @media (max-width:480px){
-      .logo{width:44px;height:44px}
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">SG</div>
-        <div>
-          <div style="font-weight:700">Santanu Ghosh</div>
-          <div class="small">AI Architect • Telecom & ML • Productizing ML</div>
-        </div>
-      </div>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#solutions">AI Solutions</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="mobile-nav" style="display:none">
-        <button class="btn btn-ghost" id="menuBtn">Menu</button>
-      </div>
-    </header>
-
-    <main>
-      <section id="home" class="hero">
-        <div class="hero-card">
-          <h1>Hello — I\'m <span class="tag">Santanu</span></h1>
-          <p class="lead">I help telecom and enterprise teams build production-ready AI — from PoC to deployed solutions (chatbots, predictive models, automation).</p>
-          <div class="cta">
-            <a class="btn btn-primary" href="#contact">Request Demo</a>
-            <a class="btn btn-ghost" href="#portfolio">See Portfolio</a>
-          </div>
-          <div class="metrics">
-            <div class="metric"><strong>10+</strong> projects</div>
-            <div class="metric"><strong>7</strong> industries</div>
-            <div class="metric"><strong>90%</strong> client satisfaction</div>
-          </div>
-        </div>
-
-        <aside class="profile">
-          <img src="https://www.gravatar.com/avatar/5c134a500a55072ec0805bbb7bae8ad8?s=400&d=identicon" alt="profile" style="width:88px;height:88px;border-radius:12px;object-fit:cover;background:var(--glass);display:block;margin-bottom:10px">
-          <div style="font-weight:700">Santanu Ghosh</div>
-          <div class="small">Enterprise Architect • AI Engineer • Telecom Presales</div>
-          <p class="small" style="margin-top:10px;color:var(--muted)">Available for consulting and short-term projects. I deliver ML production, model ops and scaled automation.</p>
-          <div style="margin-top:12px">
-            <a class="btn btn-primary" href="#contact">Hire Me</a>
-          </div>
-        </aside>
-      </section>
-
-      <section id="about" style="margin-top:28px">
-        <div class="hero-card">
-          <h2>About Me</h2>
-          <p class="lead">I am an AI & Telecom architect with experience in model development, MLOps, system integration, and productizing ML solutions for telecom and enterprise customers. I write practical, production-ready AI and love simplifying complex ML workflows.</p>
-          <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap">
-            <div class="card">
-              <h3>Skills</h3>
-              <div class="small">Python, PyTorch, TensorFlow, scikit-learn, LangChain, OpenAI, MLflow, Docker, Kubernetes, Kafka, SQL</div>
-            </div>
-            <div class="card">
-              <h3>Certifications</h3>
-              <div class="small">(List your certs here)</div>
-            </div>
-            <div class="card">
-              <h3>Experience</h3>
-              <div class="small">Enterprise AI, Telco BSS/OSS, Pre-sales architecture, ADM services</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="solutions" style="margin-top:18px">
-        <h2>AI Solutions</h2>
-        <div class="hero-card">
-          <p class="lead">Key use cases span churn prediction, anomaly detection in billing, intelligent conversational agents, revenue assurance automation, and modular model deployment services.</p>
-        </div>
-      </section>
-
-      <section id="blog" style="margin-top:18px">
-        <h2>Blog — Insights & Public Messages</h2>
-        <div class="hero-card">
-          <article style="margin-bottom:12px">
-            <h3>How RAG Improves Support Bots</h3>
-            <p class="small">Short note: Retrieval-Augmented Generation combines embeddings with LLMs to ground responses in your documents. Use cases: onboarding FAQs, knowledge base assistants, and policy lookup for customer support.</p>
-          </article>
-          <article style="margin-bottom:12px">
-            <h3>Practical MLOps — From PoC to Production</h3>
-            <p class="small">Short note: Key stages include reproducible data pipelines, model versioning, automated tests, CI/CD and monitoring. Start small: automate retraining and add drift detection early.</p>
-          </article>
-          <article style="margin-bottom:12px">
-            <h3>AI for Telecom — Where to Focus</h3>
-            <p class="small">Short note: Prioritise churn analytics, revenue assurance, predictive maintenance, and automation in BSS/OSS to unlock measurable ROI quickly.</p>
-          </article>
-          <div style="margin-top:8px"><a class="small" href="#">View all posts</a></div>
-        </div>
-      </section>
-
-      <section id="contact" style="margin-top:18px">
-        <h2>Contact / Hire Me</h2>
-        <div style="display:grid; grid-template-columns:1fr 320px; gap:18px; align-items:start">
-          <div class="hero-card">
-            <form class="contact-form" onsubmit="submitForm(event)">
-              <input id="name" placeholder="Your name" required />
-              <input id="email" placeholder="Your email" type="email" required />
-              <input id="subject" placeholder="Subject" />
-              <textarea id="message" placeholder="Tell me about your project" required></textarea>
-              <div style="display:flex; gap:10px; align-items:center">
-                <button class="btn btn-primary" type="submit">Send message</button>
-                <div class="small">Or email: <a href="mailto:santanughosh98@gmail.com" style="color:var(--accent)">santanughosh98@gmail.com</a></div>
-              </div>
-            </form>
-          </div>
-
-          <aside class="card">
-            <h3>Quick Links</h3>
-            <div class="small">GitHub • LinkedIn • Resume • Payment links</div>
-            <div style="margin-top:10px">
-              <div class="socials">
-                <a class="small" href="#">GitHub</a>
-                <a class="small" href="#">LinkedIn</a>
-                <a class="small" href="#">Resume (PDF)</a>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-    </main>
-
-    <footer>
-      <div>© <span id="year"></span> Santanu Ghosh — Built with a lightweight template • Deploy on GitHub Pages or any static host</div>
-    </footer>
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Santanu Ghosh — AI Solutions for Telecom & Enterprise</title>
+<meta name="description" content="Santanu Ghosh — AI Architect providing telecom AI solutions: churn prediction, anomaly detection, conversational AI, revenue assurance automation, and modular AI model deployment."/>
+<meta name="author" content="Santanu Ghosh"/>
+<meta property="og:title" content="Santanu Ghosh — AI Solutions for Telecom & Enterprise"/>
+<meta property="og:description" content="Explore Santanu Ghosh’s AI Solutions in telecom: churn prediction, anomaly detection, conversational AI, and modular deployment services."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://santanug5ai.github.io/aisolutions/"/>
+<meta property="og:image" content="https://raw.githubusercontent.com/santanug5ai/aisolutions/main/myphoto.jpg"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>:root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#06b6d4;--glass:rgba(255,255,255,0.04);--maxw:1100px;--radius:14px;--shadow:0 6px 24px rgba(2,6,23,0.6);}body{font-family:'Poppins',system-ui;margin:0;background:linear-gradient(180deg,#071022 0%,#071426 60%);color:#e6eef6;-webkit-font-smoothing:antialiased;}a{color:var(--accent);text-decoration:none;}a:hover{text-decoration:underline;}header{display:flex;align-items:center;justify-content:space-between;max-width:var(--maxw);margin:24px auto;padding:0 16px;}nav{display:flex;gap:12px;}nav a{color:var(--muted);padding:8px 12px;border-radius:8px;}nav a:hover{background:var(--glass);color:#fff;}.container{max-width:var(--maxw);margin:0 auto;padding:0 20px;}h1,h2,h3{color:#fff;margin:0 0 8px;}ul{margin:0;padding-left:18px;}li{margin-bottom:6px;color:var(--muted);}.hero-card{background:rgba(255,255,255,0.03);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow);margin-top:16px;}.lead{color:var(--muted);margin-bottom:12px;}footer{text-align:center;color:var(--muted);margin:40px auto;padding:10px 0;font-size:13px;max-width:var(--maxw);}img.photo{width:120px;height:120px;border-radius:12px;object-fit:cover;margin-bottom:10px;}</style>
+</head><body>
+<header>
+  <div style="display:flex;align-items:center;gap:12px">
+    <div style="width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021124;">SG</div>
+    <div><div style="font-weight:700">Santanu Ghosh</div><div style="font-size:13px;color:var(--muted)">AI Architect • Telecom & ML • Productizing ML</div></div>
   </div>
+  <nav><a href="#home">Home</a><a href="#about">About</a><a href="#solutions">AI Solutions</a><a href="#blog">Blog</a><a href="#contact">Contact</a></nav>
+</header>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+<div class="container">
+  <section id="home">
+    <div class="hero-card" style="text-align:center">
+      <img src="https://raw.githubusercontent.com/santanug5ai/aisolutions/main/myphoto.jpg" alt="Santanu Ghosh" class="photo">
+      <h1>Santanu Ghosh</h1>
+      <p class="lead">AI Architect specializing in Telecom & Enterprise AI transformation — designing and deploying practical AI use cases across BSS, CRM, and revenue domains.</p>
+    </div>
+  </section>
 
-    // Simple form handler: opens mailto with prefilled content - no backend required.
-    function submitForm(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const subject = document.getElementById('subject').value || 'Project Inquiry';
-      const message = document.getElementById('message').value;
-      const body = `Name: ${name}%0AEmail: ${email}%0A%0A${encodeURIComponent(message)}`;
-      window.location.href = `mailto:santanughosh98@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-    }
+  <section id="solutions" style="margin-top:30px">
+    <h2>AI Solutions — Key Use Case Themes</h2>
+    <div class="hero-card">
+      <p class="lead">Based on TM Forum GB1082 “AI for BSS v1.0.0”, here are five representative AI themes shaping telecom BSS transformation:</p>
+      <ul>
+        <li><strong>1. Churn Prediction & Retention:</strong> ML-based behavioral modeling to identify at-risk subscribers and optimize retention actions.</li>
+        <li><strong>2. Anomaly Detection in Billing:</strong> AI-driven detection for billing and charging anomalies to ensure accuracy and prevent leakage.</li>
+        <li><strong>3. Intelligent Conversational Agents:</strong> Generative AI co-pilots and chatbots for omni-channel self-service and support automation.</li>
+        <li><strong>4. Revenue Assurance Automation:</strong> Automated reconciliation, fraud detection, and leakage prevention with AI-driven insights.</li>
+        <li><strong>5. Modular Model Deployment Services:</strong> AI-as-a-Service for quick deployment, composable integration, and scalable model governance.</li>
+      </ul>
+    </div>
+  </section>
 
-    // Mobile menu placeholder
-    const menuBtn = document.getElementById('menuBtn');
-    if(menuBtn){
-      menuBtn.addEventListener('click', ()=>{
-        alert('On small screens you can link this to a mobile menu (simple anchor links are available).');
-      })
-    }
-  </script>
+  <section id="blog" style="margin-top:30px">
+    <h2>Blog — Insights & Public Messages</h2>
+    <div class="hero-card">
+      <ul>
+        <li><strong>How RAG Improves Support Bots:</strong> Retrieval-Augmented Generation connects LLMs with enterprise data to create reliable AI assistants.</li>
+        <li><strong>Practical MLOps:</strong> From PoC to production — automate retraining, drift detection, and versioning for reliable ML delivery.</li>
+        <li><strong>AI for Telecom Focus Areas:</strong> Churn, revenue assurance, predictive maintenance, and automation for measurable ROI.</li>
+      </ul>
+    </div>
+  </section>
 
-  <!--
-    HOW TO DEPLOY (quick):
-    1. Save this file as index.html
-    2. Create a new GitHub repository named <your-username>.github.io
-    3. Push this index.html to the repository default branch (main). GitHub Pages will auto-serve it at https://<your-username>.github.io
-    4. To use a custom domain: add your domain in repository Pages settings and create an A/CNAME record with your domain registrar.
+  <section id="contact" style="margin-top:30px">
+    <h2>Contact / Hire Me</h2>
+    <div class="hero-card">
+      <p class="lead">Interested in AI transformation for Telecom or Enterprise?</p>
+      <p>Email: <a href="mailto:santanughosh98@gmail.com">santanughosh98@gmail.com</a><br>
+      LinkedIn: <a href="https://www.linkedin.com/in/santanu-ghosh-23204624/" target="_blank">Santanu Ghosh</a></p>
+    </div>
+  </section>
+</div>
 
-    OPTIONAL ENHANCEMENTS:
-    - Replace placeholder images with your photo (update <img src="" ...>
-    - Embed Streamlit/HuggingFace demos using <iframe> links
-    - Replace mailto with a serverless form (Netlify Forms, Formspree, or Google Forms)
-    - Add Google Analytics or Plausible for tracking
-    - Add payment buttons (Gumroad, Razorpay) where needed
-  -->
-</body>
-</html>
+<footer>© <span id="year"></span> Santanu Ghosh — AI Architect | Telecom & ML Solutions</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
